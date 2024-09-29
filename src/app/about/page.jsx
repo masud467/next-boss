@@ -1,7 +1,12 @@
+import AboutContent from "@/components/AboutContent";
 import React from "react";
 
 const Page = () => {
-  return <div>this is about page</div>;
+  return (
+    <div>
+      <AboutContent></AboutContent>
+    </div>
+  );
 };
 
 export default Page;
