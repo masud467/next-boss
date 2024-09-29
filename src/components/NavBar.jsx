@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const NavBar = () => {
   const pathName = usePathname();
+  const router = useRouter();
   const navLinks = [
     {
       title: "About",
@@ -19,6 +20,9 @@ const NavBar = () => {
       path: "/services",
     },
   ];
+  const handler = () => {
+    router.push("/about");
+  };
   return (
     <div>
       <nav className="bg-red-700 text-white px-6 py-4 flex justify-between items-center">
@@ -40,6 +44,12 @@ const NavBar = () => {
             </Link>
           ))}
         </ul>
+        <button
+          onClick={handler}
+          className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
+        >
+          Login
+        </button>
       </nav>
     </div>
   );
