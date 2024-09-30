@@ -23,6 +23,10 @@ const NavBar = () => {
       title: "Services",
       path: "/services",
     },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
   ];
   const handler = () => {
     router.push("/about");
