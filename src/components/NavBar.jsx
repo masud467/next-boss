@@ -31,6 +31,8 @@ const NavBar = () => {
   const handler = () => {
     router.push("/about");
   };
+  if (pathName.includes("dashboard"))
+    return <div className="bg-green-400">Dashboard layout</div>;
   return (
     <div>
       <nav className="bg-red-700 text-white px-6 py-4 flex justify-between items-center">
