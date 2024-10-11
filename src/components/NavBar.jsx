@@ -36,10 +36,10 @@ const NavBar = () => {
     router.push("/login");
   };
   if (pathName.includes("dashboard"))
-    return <div className="bg-gray-500 text-white flex justify-between items-center px-10">
+    return <div className="bg-gray-500 text-white flex items-center gap-10 py-5">
 
     <div >Dashboard layout</div>
-    <Link href='/home'><h2 >Home</h2></Link>
+    <Link href='/'><h2 >Home</h2></Link>
     </div>;
   return (
     <div>
