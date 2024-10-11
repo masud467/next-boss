@@ -27,12 +27,20 @@ const NavBar = () => {
       title: "Blogs",
       path: "/blogs",
     },
+    {
+      title: "Dashboard",
+      path: "/dashboard",
+    },
   ];
   const handler = () => {
-    router.push("/about");
+    router.push("/login");
   };
   if (pathName.includes("dashboard"))
-    return <div className="bg-green-400">Dashboard layout</div>;
+    return <div className="bg-gray-500 text-white flex justify-between items-center px-10">
+
+    <div >Dashboard layout</div>
+    <Link href='/home'><h2 >Home</h2></Link>
+    </div>;
   return (
     <div>
       <nav className="bg-red-700 text-white px-6 py-4 flex justify-between items-center">
