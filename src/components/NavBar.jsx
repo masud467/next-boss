@@ -35,6 +35,9 @@ const NavBar = () => {
   const handler = () => {
     router.push("/login");
   };
+  const handler2 = () => {
+    router.push("/signup");
+  };
   if (pathName.includes("dashboard"))
     return <div className="bg-gray-500 text-white flex items-center gap-10 py-5">
 
@@ -68,6 +71,7 @@ const NavBar = () => {
         >
           Login
         </button>
+        <button onClick={handler2} className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"> Signup</button> 
       </nav>
     </div>
   );
