@@ -49,7 +49,7 @@ const Form = () => {
                   Login Here!
                 </a>
               </p>
-              <a className="link" href=""></a>
+              <a className="link" href="/login"></a>
             </div>
             <a className="link" href=""></a>
           </form>
