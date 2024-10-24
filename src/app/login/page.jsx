@@ -35,8 +35,8 @@ const Form = () => {
             <div>
               <button className="btn">LOGIN</button>
               <p>
-                Have an Account?{" "}
-                <a className="link" href="">
+                Are you new?{" "}
+                <a className="link" href="/signup">
                   Sign Up Here!
                 </a>
               </p>
