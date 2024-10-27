@@ -9,7 +9,6 @@ const Form = () => {
         <div className="form_area">
           <p className="title">LOGIN</p>
           <form action="">
-            
             <div className="form_group">
               <label className="sub_title" htmlFor="email">
                 Email

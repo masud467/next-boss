@@ -39,11 +39,14 @@ const NavBar = () => {
     router.push("/signup");
   };
   if (pathName.includes("dashboard"))
-    return <div className="bg-gray-500 text-white flex items-center gap-10 py-5">
-
-    <div >Dashboard layout</div>
-    <Link href='/'><h2 >Home</h2></Link>
-    </div>;
+    return (
+      <div className="bg-gray-500 text-white flex items-center gap-10 py-5">
+        <div>Dashboard layout</div>
+        <Link href="/">
+          <h2>Home</h2>
+        </Link>
+      </div>
+    );
   return (
     <div>
       <nav className="bg-red-700 text-white px-6 py-4 flex justify-between items-center">
@@ -71,7 +74,13 @@ const NavBar = () => {
         >
           Login
         </button>
-        <button onClick={handler2} className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"> Signup</button> 
+        <button
+          onClick={handler2}
+          className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
+        >
+          {" "}
+          Signup
+        </button>
       </nav>
     </div>
   );
