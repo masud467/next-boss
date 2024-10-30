@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import React from "react";
 import styled from "styled-components";
 
@@ -42,7 +43,8 @@ const Form = () => {
               />
             </div>
             <div>
-              <button className="btn">SIGN UP</button>
+              <Button className="btn">SIGN UP</Button>
+              
               <p>
                 Have an Account?{" "}
                 <a className="link" href="">
