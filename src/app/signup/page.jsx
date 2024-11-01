@@ -44,7 +44,7 @@ const Form = () => {
             </div>
             <div>
               <Button className="btn">SIGN UP</Button>
-              
+
               <p>
                 Have an Account?{" "}
                 <a className="link" href="">
@@ -53,10 +53,8 @@ const Form = () => {
               </p>
               <a className="link" href="/login"></a>
             </div>
-            <a className="link" href=""></a>
           </form>
         </div>
-        <a className="link" href=""></a>
       </div>
     </StyledWrapper>
   );
