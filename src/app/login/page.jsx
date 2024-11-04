@@ -7,9 +7,6 @@ const Form = () => {
     <StyledWrapper className="flex justify-center items-center w-full h-screen">
       <div className=" ">
         <form action className="form ">
-          <p>
-            Welcome,<span>sign in to continue</span>
-          </p>
           <button className="oauthButton">
             <svg className="icon" viewBox="0 0 24 24">
               <path
@@ -44,8 +41,9 @@ const Form = () => {
             <div />
           </div>
           <input type="email" placeholder="Email" name="email" />
+          <input type="number" placeholder="Password" name="password" />
           <button className="oauthButton">
-            Continue
+            Login
             <svg
               className="icon"
               xmlns="http://www.w3.org/2000/svg"

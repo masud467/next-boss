@@ -43,7 +43,9 @@ const Form = () => {
             <span>OR</span>
             <div />
           </div>
+          <input type="name" placeholder="Name" name="name" />
           <input type="email" placeholder="Email" name="email" />
+          <input type="number" placeholder="Password" name="password" />
           <button className="oauthButton">
             Continue
             <svg
