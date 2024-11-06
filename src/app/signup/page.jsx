@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Form = () => {
   return (
     <StyledWrapper className="flex justify-center items-center w-full h-screen">
-      <div className=" ">
+      <div className="h-screen mt-5 ">
         <form action className="form ">
           <p>
             Welcome,<span>sign in to continue</span>
