@@ -7,8 +7,8 @@ const Footer = () => {
   if (pathName.includes("dashboard"))
     return <div className="bg-gray-500 text-white">dashboard footer</div>;
   return (
-    <div className="bg-gray-500 text-white">
-      <footer class="w-full py-14">
+    <div>
+      <footer class="w-full py-14 bg-gray-500 text-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl mx-auto">
             <a href="https://pagedone.io/" class="flex justify-center ">
