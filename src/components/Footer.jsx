@@ -7,7 +7,7 @@ const Footer = () => {
   if (pathName.includes("dashboard"))
     return <div className="bg-gray-500 text-white">dashboard footer</div>;
   return (
-    <div>
+    <div className="bg-gray-500 text-white">
       <footer class="w-full py-14">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl mx-auto">
@@ -18,10 +18,6 @@ const Footer = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                
-                
-             
-                
                 <defs>
                   <linearGradient
                     id="paint0_linear_9129_4680"
