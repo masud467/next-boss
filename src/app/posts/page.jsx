@@ -1,28 +1,26 @@
-import { Slice } from 'lucide-react';
-import React from 'react';
+import { getPosts } from "@/services/postApi";
+import React from "react";
 
-const getPosts = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  return data;
-};
-
-const Page = async() => {
-  const postsData= await getPosts();
+const Page = async () => {
+  const postsData = await getPosts();
   console.log(postsData);
   return (
-    <div className='pb-5 px-5'>
+    <div className="pb-5 px-5">
       <h4>All Posts</h4>
-      <div className='grid grid-cols-4 gap-6'>
-        {postsData?.slice(0,20)?.map((post) => (
-          <div key={post.id} className='border-2 p-6'>
-            <h4><span className='font-bold'>Title:</span> {post.title}</h4>
-            <p><span className='font-bold'>Description:</span> {post.body}</p>
+      <div className="grid grid-cols-4 gap-6">
+        {postsData?.slice(0, 20)?.map((post) => (
+          <div key={post.id} className="border-2 p-6">
+            <h4>
+              <span className="font-bold">Title:</span> {post.title}
+            </h4>
+            <p>
+              <span className="font-bold">Description:</span> {post.body}
+            </p>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Page;
