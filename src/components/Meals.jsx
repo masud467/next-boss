@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Meals = () => {
@@ -44,11 +45,12 @@ const Meals = () => {
           !error &&
           meals?.map((meal) => (
             <div key={meal?.idMeal} className="border-2 p-2">
+              <Image src={meal.strMealThumb} alt={meal.strMeal} width={500} height={500}></Image>
               <h1>{meal?.strMeal}</h1>
               <h3>{meal?.strInstructions}</h3>
             </div>
           ))}
-        {error && <h1 >No Data Found.....</h1>}
+        {error && <h1>No Data Found.....</h1>}
       </div>
     </div>
   );
