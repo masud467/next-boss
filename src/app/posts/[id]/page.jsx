@@ -1,12 +1,12 @@
 import React from "react";
 const getPostsDetails = async (id) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${id}`);
   const data = await res.json();
   return data;
 };
 export const generateMetadata = async ({ params }) => {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${params.id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.id}`
   );
   const postData = await res.json();
   return {
