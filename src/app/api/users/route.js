@@ -1,7 +1,7 @@
 export async function GET() {
   return Response.json(users, {
     headers: {
-      "Set-Cookie": "theme=dark",
+      "Set-Cookie": "cookie=value",
     },
   });
 }
