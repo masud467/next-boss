@@ -12,7 +12,7 @@ export async function PATCH(request, { params }) {
   });
 }
 
-export async function DELETE(request, { params }){
+export async function DELETE(request, { params }) {
   const newUsers = users.filter((user) => user.id !== parseInt(params.id));
   return Response.json({
     message: "user deleted",
