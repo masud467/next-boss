@@ -1,4 +1,6 @@
 "use client";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
@@ -6,6 +8,8 @@ import React from "react";
 const NavBar = () => {
   const pathName = usePathname();
   const router = useRouter();
+  const session = useSession();
+  console.log(session);
   const navLinks = [
     {
       title: "Home",
@@ -44,7 +48,7 @@ const NavBar = () => {
     router.push("/login");
   };
   const handler2 = () => {
-    router.push("/signup");
+    router.push("api/auth/signin");
   };
   if (pathName.includes("dashboard"))
     return (
@@ -76,19 +80,44 @@ const NavBar = () => {
             </Link>
           ))}
         </ul>
-        <button
+        {/* <button
           onClick={handler}
           className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
         >
           Login
-        </button>
-        <button
-          onClick={handler2}
-          className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
-        >
-          {" "}
-          Signup
-        </button>
+        </button> */}
+        <div className="flex items-center gap-5">
+          <div>
+            <Image
+              className="rounded-full h-14 w-14"
+              height={50}
+              width={50}
+              alt={session.data?.user?.name}
+              src={session.data?.user?.image}
+            ></Image>
+          </div>
+          <div>
+            {session.data?.user?.name}
+            <br />
+            {session.data?.user?.type}
+          </div>
+        </div>
+        {session.status === "authenticated" ? (
+          <button
+            onClick={()=> signOut()}
+            className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
+          >
+            {" "}
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={handler2}
+            className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
+          >
+            Login
+          </button>
+        )}
       </nav>
     </div>
   );
