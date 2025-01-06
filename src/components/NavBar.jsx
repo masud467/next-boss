@@ -111,13 +111,25 @@ const NavBar = () => {
             Logout
           </button>
         ) : (
+          <>
+        
           <button
             onClick={handler2}
             className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
           >
             Login
           </button>
+          <Link href={'api/auth/signup'}>
+          <button
+            onClick={handler2}
+            className="bg-white text-black px-5 py-3 rounded-2xl text-xl font-medium"
+          >
+            Sign Up
+          </button>
+          </Link>
+          </>
         )}
+        
       </nav>
     </div>
   );
