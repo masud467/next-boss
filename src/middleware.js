@@ -1,18 +1,14 @@
-import { NextResponse } from "next/server";
-// const user = false;
-const cookie = "next-boss";
-export const middleware = (request) => {
-  // if (!user) {
-  //   return NextResponse.redirect(new URL("/login", request.url));
-  // }
-  const coo = request.cookies.get("token");
-  if (!coo || coo.value !== cookie) {
-    return NextResponse.redirect(new URL("/login", request.url));
+import { cookies } from "next/headers"
+import { NextResponse } from "next/server"
+
+export const middleware = async (request)=>{
+  const token = cookies(request).get("next-auth.session-token")
+  if(!token){
+    return NextResponse.redirect(new URL("/api/auth/signin", request.url))
   }
+  return NextResponse.next()
 
-  return NextResponse.next();
-};
-
+}
 export const config = {
-  matcher: ["/services"],
-};
+  matcher:["/dashboard","/services"] 
+}
