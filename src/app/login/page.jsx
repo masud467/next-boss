@@ -3,12 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const LoginPage = () => {
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
-  };
   return (
     <div className="container mx-auto p-24">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center justify-center ">
@@ -23,7 +17,7 @@ const LoginPage = () => {
         <div className="border-2 lg:p-24 p-5">
           <h1 className="text-center text-3xl font-semibold">Login</h1>
 
-          <form onSubmit={handleLogin}>
+          <form>
             <label htmlFor="email">Email</label>
             <input
               type="text"
